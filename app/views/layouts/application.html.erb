@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cuisinian</title>
+  <%= csrf_meta_tags %>
+  
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+</head>
+
+<body>
+  <div class="light-controller"> 
+    <header>
+      <a href="/"><img class="header-logo" src="assets/header-logo.png" alt="header-logo"></a>
+      
+      <div class="menu">
+        <ul>
+          <li>Order</li>
+          <li>About</li>
+          <li>Menu</li>
+          <li>Promotion</li>
+          <li><%= link_to "Contact us", contact_path %></li>
+        </ul> 
+      </div>
+      
+    </header>
+    <%= yield %>
+  </div>
+</body>
+</html>
