@@ -19,11 +19,50 @@ section_names.each do |name|
 end
 
 # Add food items to correct Section in Database
-# breakfast_food = [
-#   {
-#     name: "egg"
-#     price: 100_000
-#     description: "Really delicious"
-#     section_id: 1
-#   }
-# ]
+breakfast_foods = [
+{
+name: "egg",
+price: 100_000,
+description: "Really delicious",
+section_id: 1,
+image_url: "http://loremflickr.com/320/240/egg"
+
+},
+
+{
+name: "bread",
+price: 10_000,
+description: "Really delicious and terrible",
+section_id: 1,
+image_url: "http://loremflickr.com/320/240/bread"
+},
+
+{
+name: "banana",
+price: 10_000,
+description: "Hate it",
+section_id: 1,
+image_url: "http://loremflickr.com/320/240/banana"
+},
+
+{
+name: "hamburger",
+price: 10_000,
+description: "Nice fast food",
+section_id: 1,
+image_url: "http://loremflickr.com/320/240/hamburger"
+}
+
+]
+
+breakfast_foods.each do |food|
+  food_item = FoodItem.new(
+  name: food[:name], 
+  price: food[:price], 
+  description: food[:description], 
+  section_id: food[:section_id], 
+  image_url: food[:image_url])
+
+  food_item.save()
+end
+
