@@ -19,11 +19,11 @@ section_names.each do |name|
 end
 
 # Add food items to correct Section in Database
-breakfast_food = [
-  {
-    name: "egg"
-    price: 100_000
-    description: "Really delicious"
-    section_id: 1
-  }
-]
+# breakfast_food = [
+#   {
+#     name: "egg"
+#     price: 100_000
+#     description: "Really delicious"
+#     section_id: 1
+#   }
+# ]
