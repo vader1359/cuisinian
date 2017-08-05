@@ -10,6 +10,10 @@
 # Add sections to the database
 section_names = [:Breakfast, :Lunch, :Dinner, :Drink]
 section_names.each do |name|
-  Section.create(name: name)
-  puts "#{name} section added OK"
+  section = Section.create(name: name)
+  if section.persisted?
+    puts "#{name} section added OK"
+  else
+    puts "#{name} has not been added"
+  end
 end

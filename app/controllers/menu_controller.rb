@@ -1,4 +1,4 @@
-class SectionsController < ApplicationController
+class MenuController < ApplicationController
   def index
     @sections = Section.all
   end

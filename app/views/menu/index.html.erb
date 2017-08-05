@@ -1,0 +1,7 @@
+<br><br><br><br><br><br><br><br><br><br><br>
+<h1>Menu</h1>
+<% @sections.each do |section| %>
+<ul>
+  <h1><li><%= link_to section.name, menu_path(section: section.name) %></li></h1>
+</ul>
+<% end %>
