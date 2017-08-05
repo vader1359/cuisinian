@@ -8,18 +8,20 @@
 
 html, body {
   height:100%;
+  
 }
 
 body {
-  background-image: url("all_background.png");
+  background-image: url("menu_bg.png");
   color: $color-white;
+  min-height: 100%;
   
   .light-controller {
-    
+    height: 2357px;
     background-color: rgba(62,59,74,0.7);
     position:absolute;
     top:0;
-    bottom:0;
+    bottom:-100px;
     left: 0;
     right: 0;
   };

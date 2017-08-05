@@ -1,5 +1,6 @@
 [x] Prepare database for Breakfast, Lunch, Dinner, Drink, Specialities with name, price, description, image_url, section-id
-[ ] Finish page Welcome
+[x] Finish page Welcome
+[ ] Fix the root redirect
 
 
 

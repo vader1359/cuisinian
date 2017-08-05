@@ -1,0 +1,16 @@
+<br><br><br><br><br><br><br><br><br><br><br>
+<h1>Menu</h1>
+<% @sections.each do |section| %>
+<ul>
+  <h1><li><%= link_to section.name, menu_path(section: section.name) %></li></h1>
+</ul>
+
+<% end %>
+
+
+<% @food_items.each do |food_item| %>
+  <h1><%= food_item.name %></h1>
+  <h2><%= food_item.price %></h2>
+  <h2><%= food_item.description %></h2>
+  <%= image_tag("#{food_item.image_url}", size: "200x100") %>
+<% end %>
