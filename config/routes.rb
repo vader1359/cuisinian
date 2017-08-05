@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'sections/name'
+  resource :sections, only: [:show]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get "contact" => "home#contact"
   get "welcome" => "home#welcome"
   
-  root "home#menu"
+  root "sections#show"
 end
