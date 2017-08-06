@@ -1,0 +1,11 @@
+<% if (index % 2) == 0 %>
+  <div class="specialities-item-img odd div-shadow">
+    <img src="assets/food_images/<%= food_item.name %>.jpg" alt="<%= food_item.name %>">
+  </div>
+<% end %>
+
+<% if (index % 2) == 1 %>
+  <div class="specialities-item-img even div-shadow">
+    <img src="assets/food_images/<%= food_item.name %>.jpg" alt="<%= food_item.name %>">
+  </div>
+<% end %>

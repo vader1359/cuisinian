@@ -48,11 +48,11 @@ image_url: "https://static.pexels.com/photos/8758/food-dinner-lemon-rice.jpg"
 },
 
 {
-name: "Beefian",
-price: 99,
-description: "Barbecue Beef cooked with Iano leaf",
+name: "Cockian",
+price: 72,
+description: "Cheap alcohol from Iano city",
 section_id: 5,
-image_url: "https://static.pexels.com/photos/410648/pexels-photo-410648.jpeg"
+image_url: "https://static.pexels.com/photos/298719/pexels-photo-298719.jpeg"
 }
 
 ]
@@ -154,12 +154,13 @@ image_url: "https://static.pexels.com/photos/39634/pexels-photo-39634.jpeg"
 },
 
 {
-name: "Fishian",
-price: 36,
-description: "Fresh fish from Iano's dead sea",
+name: "Beefian",
+price: 99,
+description: "Barbecue Beef cooked with Iano leaf",
 section_id: 3,
-image_url: "https://static.pexels.com/photos/262973/pexels-photo-262973.jpeg"
+image_url: "https://static.pexels.com/photos/410648/pexels-photo-410648.jpeg"
 }
+
 ]
 
 drinks = [
@@ -189,12 +190,13 @@ image_url: "https://static.pexels.com/photos/158821/mineral-water-lime-ice-mint-
 },
 
 {
-name: "Cockian",
-price: 72,
-description: "Cheap alcohol from Iano city",
+name: "Fishian",
+price: 36,
+description: "Fresh fish from Iano's dead sea",
 section_id: 4,
-image_url: "https://static.pexels.com/photos/298719/pexels-photo-298719.jpeg"
+image_url: "https://static.pexels.com/photos/262973/pexels-photo-262973.jpeg"
 }
+
 ]
 
 specialities.each do |food|
@@ -255,14 +257,14 @@ end
 
 # Crop the image to needed size
 # Array -> url
-FoodItem.all.each do |food_item|
-  magic_image = Magick::ImageList.new(food_item.image_url)
-  resized_image = magic_image.resize_to_fill!(308,337)
-  # crop_image = magic_image.crop!(CenterGravity, 308, 337)
-  resized_image.write("./app/assets/images/food_images/#{food_item.name}.jpg") # Save on one file repeatly (should keep)
-  puts food_item.name
-  puts food_item.image_url
-end
+# FoodItem.all.each do |food_item|
+#   magic_image = Magick::ImageList.new(food_item.image_url)
+#   resized_image = magic_image.resize_to_fill!(308,338)
+#   # crop_image = magic_image.crop!(CenterGravity, 308, 337)
+#   resized_image.write("./app/assets/images/food_images/#{food_item.name}.jpg") # Save on one file repeatly (should keep)
+#   puts food_item.name
+#   puts food_item.image_url
+# end
 # puts image = Magick::ImageList.new("https://static.pexels.com/photos/5506/bread-food-salad-sandwich.jpg")
 
 # crop = image.crop!(CenterGravity, 308, 337)
