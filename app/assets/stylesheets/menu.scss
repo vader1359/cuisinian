@@ -45,7 +45,26 @@
     img {
       margin-top: -25px;
     }
-
+    
+  }
+  
+  .food-specialities{
+    margin-left: -1px;
+    width: 100%;
+    margin-top: 196px;
+    .specialities-item-img {
+      width: 308px;
+      height: 338px;
+      background-image: "images/special-food-placeholder.png";
+      background-color: gray;
+      background-size: cover;
+      
+      float: right;
+      
+    }
+    .specialities-item-img.odd {
+      margin-top: 70px;
+    }
   }
 	
 }

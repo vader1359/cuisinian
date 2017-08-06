@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'rmagick'
+include Magick
 
 # Add sections to the database
 section_names = [:Breakfast, :Lunch, :Dinner, :Drink, :Specialities]
@@ -30,7 +32,7 @@ image_url: "https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.j
 },
 
 {
-name: "Salmonian",
+name: "Blueberian",
 price: 99,
 description: "High quality bluberries from Iano",
 section_id: 5,
@@ -38,7 +40,7 @@ image_url: "https://static.pexels.com/photos/8688/food-blueberries-blueberry.jpg
 },
 
 {
-name: "Lemonian",
+name: "Rician",
 price: 99,
 description: "Rice with grilled fish and lemon soup",
 section_id: 5,
@@ -239,3 +241,29 @@ dinners.each do |food|
   food_item.save()
 end
 
+drinks.each do |food|
+  food_item = FoodItem.new(
+  name: food[:name], 
+  price: food[:price], 
+  description: food[:description], 
+  section_id: food[:section_id], 
+  image_url: food[:image_url])
+  
+  food_item.save()
+end
+
+
+# Crop the image to needed size
+# Array -> url
+FoodItem.all.each do |food_item|
+  magic_image = Magick::ImageList.new(food_item.image_url)
+  resized_image = magic_image.resize_to_fill!(308,337)
+  # crop_image = magic_image.crop!(CenterGravity, 308, 337)
+  resized_image.write("./app/assets/images/food_images/#{food_item.name}.jpg") # Save on one file repeatly (should keep)
+  puts food_item.name
+  puts food_item.image_url
+end
+# puts image = Magick::ImageList.new("https://static.pexels.com/photos/5506/bread-food-salad-sandwich.jpg")
+
+# crop = image.crop!(CenterGravity, 308, 337)
+# crop.write('./app/assets/images/food_images/test_cropped.jpg')

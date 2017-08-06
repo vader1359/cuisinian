@@ -11,6 +11,19 @@
         <li><%= link_to "Drink", menu_path(section: :Drink) %></li>
       </ul>
     </div>
+    
+    <div class="food-specialities">
+          <div class="specialities-item-img odd"><img src="assets/food_images/#{food_item.name}.jpg" alt=""></div>
+          <div class="specialities-item-img even">Dfsd</div>
+          <div class="specialities-item-img odd">dfasd</div>
+          <div class="specialities-item-img even">sadf</div>
+          @specialities name price description image_url section_id: Here only need name + image_url
+          @specialities.each do |food_item|
+          food_item.name
+          food_item.converted_image_url
+
+
+    </div>
 
   </div>
 </div>
