@@ -13,15 +13,34 @@
     </div>
     
     <div class="food-specialities">
-
+      
       <% @food_items.each_with_index do |food_item, index| %>
-        <%= render "specialities", index: index, food_item: food_item %>
-        
+      <%= render "specialities", index: index, food_item: food_item %>
       <% end %>
-
+      
     </div>
-
+    
+    
+    
     <div class="menu-header">Specialities</div>
-
+    
+    <div class="ten-foods">
+      <div class="food-others">
+        <% @foods.shuffle[0..4].each do |food_item| %>
+        <%= render "others", food_item: food_item %>
+        <% end %>
+        
+      </div>
+      
+      <div class="food-others">
+        <% @foods.shuffle[0..4].each do |food_item| %>
+        <%= render "others", food_item: food_item %>
+        <% end %>
+        
+      </div>
+    </div>
+    
+    <div class="menu-header-other">Others</div>
+    
   </div>
 </div>

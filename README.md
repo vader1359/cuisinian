@@ -22,12 +22,12 @@ URL: **heroku-app-url**
   * [x] Drinks
 * [x] User should see at least 5 food items in each section.
 * [x] Each food item should have the following fields:
-  * Name (Canh Chua)
+  * Name (Canh Chua)z
   * Description (Delicious fish soup)
   * Price (VND)
   * Section - Breakfast, Lunch, Dinner, Drinks
   * Image URL - do a google search or use LoremFlickr: http://loremflickr.com/320/240/canhchua
-* [ ] User should be able to filter by section of Breakfast, Lunch, Dinner, or Drinks and see only the relevant items.
+* [x] User should be able to filter by section of Breakfast, Lunch, Dinner, or Drinks and see only the relevant items.
 * [ ] User can sort menu items by “alphabetical”, “price low to high”, and “price high to low”.
 * [ ] User should be able to search for a menu item and see results.
 * [ ] Clicking on an item in the menu brings up its detail, where you see the description and a larger picture.
@@ -47,12 +47,20 @@ URL: **heroku-app-url**
 * [ ] The Restaurant (you) receives an email or SMS when a User places an order. Try Twilio if you’d like a SMS API. Use Promo Code CodeSchool15 for $30 free credit.
 
 The following **additional** features are implemented:
+* [x] Add a Welcome Page
+* [x] Redesign UI/UX
+* [x] Using RImageMagick to fit the photo @good size
 
-* [ ] Something nice you added.
 
 The following **known issues**:
-
-* List bugs or things that don't work yet
+* [ ] Need to set Welcome Page show only the first time
+* [ ] Have not modify the font of Menu
+* [ ] Need to download images -> should display without download
+* [ ] Only can display 4, if add 5 items to as Section -> Terrible. Need to pick 4 of them to display
+* [ ] Need a way to stop page go to the top when load Section
+* [ ] Still not show name of dishes
+* [ ] Setting uniqueness to true affect all properties
+* [ ] 2 lines differently display random, use @foods 2 times
 
 ## Video Walkthrough
 

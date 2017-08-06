@@ -49,8 +49,11 @@
   }
   
   .food-specialities{
+    float: middle;
     margin-left: -1px;
-    width: 100%;
+    width: 1400px;
+    padding-right: 3500px;
+    transform: scaleX(1.1);
     margin-top: 196px;
     margin-bottom: 700px;
     .specialities-item-img {
@@ -66,15 +69,40 @@
     .specialities-item-img.odd {
       margin-top: 70px;
     }
-
+    
     
   }
-
+  
   .menu-header {
-      width: 281px;
-      height: 118px;
-      font-size: 56px;
-      margin-left: 480px;
+    width: 281px;
+    height: 118px;
+    font-size: 56px;
+    margin-left: 480px;
+  }
+  
+  .ten-foods{
+    padding-bottom: 500px;
+    .food-others {
+      width: 100%;
+      margin-left: 60px;
+      margin-top: 70px;
+      .others-item-img {
+        margin-top: 15px;
+        width: 204px;
+        height: 223px;
+        float: left;
+        margin-left: 15px;
+        
+      }
+      
+      
     }
-	
+   
+  }
+   .menu-header-other {
+      font-size: 56px;
+      margin-left: 530px;
+      margin-top: 100px;
+    }
 }
+

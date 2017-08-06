@@ -1,6 +1,7 @@
 class MenuController < ApplicationController
   def index
     @sections = Section.all
+    @foods = FoodItem.all
     specialities_section = Section.find_by(name: :Specialities)
     @specialities = specialities_section.food_items
     
