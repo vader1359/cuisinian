@@ -1,0 +1,22 @@
+<h1>Your Cart</h1>
+
+<table class="table" >
+
+  <thread class="thread-default">
+
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+    </tr>
+  </thread>
+  <tbody>
+    <% @cart.line_items.each do |line_item| %>
+    <tr>
+      <td><%= line_item.name %></td>
+      <td><%= line_item.quantity %></td>
+    </tr>
+    <% end %>
+  </tbody>
+  
+
+</table>

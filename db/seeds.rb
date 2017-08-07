@@ -255,17 +255,11 @@ drinks.each do |food|
 end
 
 
-# Crop the image to needed size
-# Array -> url
-# FoodItem.all.each do |food_item|
-#   magic_image = Magick::ImageList.new(food_item.image_url)
-#   resized_image = magic_image.resize_to_fill!(308,338)
-#   # crop_image = magic_image.crop!(CenterGravity, 308, 337)
-#   resized_image.write("./app/assets/images/food_images/#{food_item.name}.jpg") # Save on one file repeatly (should keep)
-#   puts food_item.name
-#   puts food_item.image_url
-# end
-# puts image = Magick::ImageList.new("https://static.pexels.com/photos/5506/bread-food-salad-sandwich.jpg")
-
-# crop = image.crop!(CenterGravity, 308, 337)
-# crop.write('./app/assets/images/food_images/test_cropped.jpg')
+FoodItem.all.each do |food_item|
+  magic_image = Magick::ImageList.new(food_item.image_url)
+  resized_image = magic_image.resize_to_fill!(340,340)
+  # crop_image = magic_image.crop!(CenterGravity, 308, 337)
+  resized_image.write("./app/assets/images/food_images/#{food_item.name}.jpg") # Save on one file repeatly (should keep)
+  puts food_item.name
+  puts food_item.image_url
+end

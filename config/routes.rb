@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  resources :line_items
+
+  post "carts/add"
+  get "cart" => "carts#show"
+
   resources :food_items
   resources :sections
   resources :sections do

@@ -1,3 +1,8 @@
   <div class="others-item-img div-shadow">
     <img src="assets/food_images/<%= food_item.name %>.jpg" width="204" height="223" alt="<%= food_item.name %>">
+    <%= form_for LineItem.new(food_item: food_item), url: carts_add_path do |f| %>
+      <%= f.hidden_field :food_item_id %>
+      <%= f.number_field :quantity %>
+      <%= f.submit "order" %>
+    <% end %>
   </div>

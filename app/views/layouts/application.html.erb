@@ -11,10 +11,16 @@
   <div class="light-controller"> 
     <header>
       <a href="/"><img class="header-logo" src="assets/header-logo.png" alt="header-logo"></a>
-      
+
+      <% flash.each do |key, value| %>
+        <div class="alert <%= flasherize(key) %>"><%= value %></div>
+      <% end %>
+
       <div class="menu">
         <ul>
-          <li>Order</li>
+          <%= link_to cart_path do %>
+             <li><%= get_cart.item_count %> Order</li>
+          <% end %>
           <li>About</li>
           <li><%= link_to "Menu", menu_path %></li>
           <li>Promotion</li>

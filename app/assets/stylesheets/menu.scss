@@ -49,60 +49,125 @@
   }
   
   .food-specialities{
-    float: middle;
-    margin-left: -1px;
-    width: 1400px;
-    padding-right: 3500px;
-    transform: scaleX(1.1);
+    width: 200%;
     margin-top: 196px;
     margin-bottom: 700px;
+    margin-left: 65px;
+    
+    
+    
     .specialities-item-img {
-      width: 308px;
-      height: 338px;
+      width: 340px;
+      height: 340px;
+      margin-left:5px;
+      position: relative;
+      
       background-image: "images/special-food-placeholder.png";
       background-color: gray;
       background-size: cover;
       
       float: right;
       
-    }
-    .specialities-item-img.odd {
-      margin-top: 70px;
-    }
-    
-    
-  }
-  
-  .menu-header {
-    width: 281px;
-    height: 118px;
-    font-size: 56px;
-    margin-left: 480px;
-  }
-  
-  .ten-foods{
-    padding-bottom: 500px;
-    .food-others {
-      width: 100%;
-      margin-left: 60px;
-      margin-top: 70px;
-      .others-item-img {
-        margin-top: 15px;
-        width: 204px;
-        height: 223px;
-        float: left;
-        margin-left: 15px;
-        
+      position: relative;
+      left: -50%; /* or right 50% */
+      text-align: left;
+
+      img {
+        clear: both;
+      }
+      
+      .rate-bar {
+        width: 340px;
+        height: 51px;
+        background-color: $color-purple-trans;
+        position: absolute;
+
+        img {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-left: 30px;
+        }
+
+        div{
+          position: absolute;
+          right: 30px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 18px;
+        }
+      }
+
+      .big-order-btn {
+        position: absolute;
+        right: -1px;
+        bottom: -1px;
+
       }
       
       
     }
-   
-  }
-   .menu-header-other {
-      font-size: 56px;
-      margin-left: 530px;
-      margin-top: 100px;
+    .specialities-item-img.odd {
+      margin-top: 70px;
     }
-}
-
+  }
+  
+  
+  //   .specialities-item-img {
+    //     width: 308px;
+    //     height: 338px;
+    //     background-image: "images/special-food-placeholder.png";
+    //     background-color: gray;
+    //     background-size: cover;
+    //     margin-left: 33px;
+    
+    //     float: right;
+    
+    //     .rate-bar {
+      //       width: 340px;
+      //       height: 51px;
+      //       background-color: $color-purple-trans
+      //     }
+      
+      //   }
+      .specialities-item-img.odd {
+        margin-top: 70px;
+      }
+      
+      
+      // }
+      
+      .menu-header {
+        width: 281px;
+        height: 118px;
+        font-size: 56px;
+        margin-left: 480px;
+      }
+      
+      .ten-foods{
+        padding-bottom: 500px;
+        .food-others {
+          width: 100%;
+          margin-left: 60px;
+          margin-top: 70px;
+          .others-item-img {
+            margin-top: 15px;
+            width: 204px;
+            height: 223px;
+            float: left;
+            margin-left: 15px;
+            
+          }
+          
+          
+        }
+        
+      }
+      .menu-header-other {
+        font-size: 56px;
+        margin-left: 530px;
+        margin-top: 100px;
+      }
+    }
+    
+    

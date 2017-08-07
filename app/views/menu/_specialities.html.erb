@@ -1,11 +1,22 @@
 <% if (index % 2) == 0 %>
-  <div class="specialities-item-img odd div-shadow">
-    <img src="assets/food_images/<%= food_item.name %>.jpg" alt="<%= food_item.name %>">
-  </div>
+<div class="specialities-item-img odd div-shadow">
+  <div class="rate-bar"> 
+    <img src="assets/four_stars.png" alt="rate">
+    <div>50 views</div>
+  </div> 
+  <img class="big-order-btn" src="assets/big_order_btn.png" alt="">
+  <img src="assets/food_images/<%= food_item.name %>.jpg" alt="<%= food_item.name %>">
+
+</div>
 <% end %>
 
 <% if (index % 2) == 1 %>
-  <div class="specialities-item-img even div-shadow">
-    <img src="assets/food_images/<%= food_item.name %>.jpg" alt="<%= food_item.name %>">
-  </div>
+<div class="specialities-item-img even div-shadow">
+  <div class="rate-bar"> 
+    <img src="assets/four_stars.png" alt="rate">
+    <div>50 views</div>
+  </div> 
+  <img class="big-order-btn" src="assets/big_order_btn.png" alt="">
+  <img src="assets/food_images/<%= food_item.name %>.jpg" alt="<%= food_item.name %>">
+</div>
 <% end %>
